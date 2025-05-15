@@ -1,0 +1,24 @@
+1. Explain the difference between useEffect, useLayoutEffect, and useInsertionEffect. When would you use each?
+
+	useEffect: It is used for side effects, and it was used in dependency based renders when side effects.
+	useLayoutEffect: When you need to measure or manipulate the DOM immediately before the browser paints.
+	useInsertionEffect: Very rare; used by CSS-in-JS libraries .
+
+2. What are higher-order components (HOCs)? How do they differ from custom hooks?
+
+	Higher-Order Component (HOC):  A function that takes a component and returns a new component.
+	Custom Hook: A reusable function that uses React hooks to encapsulate logic.
+
+3. Describe how context works in React. What are the potential drawbacks of using React Context for large-scale state management?
+
+	React Context provides a way to pass data deeply through the component tree without prop drilling. Includes: React.createContext(), Provider, and useContext().
+
+4. What is React’s reconciliation process? How does React determine what to update in the DOM?
+
+	Reconciliation is how React determines what changes need to be made to the real DOM based on updates in the virtual DOM.
+
+5. How would you prevent unnecessary re-renders in a functional component?
+
+	Split components – Isolate parts of the UI into smaller components with targeted re-renders.
+	React.memo() – Memoizes a functional component if its props don’t change.
+	useCallback() – Memoizes functions to prevent identity changes.
